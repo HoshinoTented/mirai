@@ -480,6 +480,7 @@ public abstract interface class net/mamoe/mirai/contact/NormalMember : net/mamoe
 	public abstract fun getMuteTimeRemaining ()I
 	public abstract fun getNameCard ()Ljava/lang/String;
 	public abstract fun getSpecialTitle ()Ljava/lang/String;
+	public fun isMuted ()Z
 	public synthetic fun kick (Ljava/lang/String;)Lkotlin/Unit;
 	public fun kick (Ljava/lang/String;)V
 	public abstract fun kick (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5577,6 +5578,7 @@ public class net/mamoe/mirai/utils/BotConfiguration {
 	public final fun getHeartbeatTimeoutMillis ()J
 	public final fun getHighwayUploadCoroutineCount ()I
 	public final fun getJson ()Lkotlinx/serialization/json/Json;
+	public final fun getLoginCacheEnabled ()Z
 	public final fun getLoginSolver ()Lnet/mamoe/mirai/utils/LoginSolver;
 	public final fun getNetworkLoggerSupplier ()Lkotlin/jvm/functions/Function1;
 	public final fun getParentCoroutineContext ()Lkotlin/coroutines/CoroutineContext;
@@ -5620,6 +5622,7 @@ public class net/mamoe/mirai/utils/BotConfiguration {
 	public final fun setHeartbeatTimeoutMillis (J)V
 	public final fun setHighwayUploadCoroutineCount (I)V
 	public final fun setJson (Lkotlinx/serialization/json/Json;)V
+	public final fun setLoginCacheEnabled (Z)V
 	public final fun setLoginSolver (Lnet/mamoe/mirai/utils/LoginSolver;)V
 	public final fun setNetworkLoggerSupplier (Lkotlin/jvm/functions/Function1;)V
 	public final fun setParentCoroutineContext (Lkotlin/coroutines/CoroutineContext;)V
@@ -6100,7 +6103,7 @@ public abstract interface class net/mamoe/mirai/utils/RemoteFile {
 	public fun mkdir ()Z
 	public abstract fun mkdir (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun moveTo (Ljava/lang/String;)Z
-	public abstract fun moveTo (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun moveTo (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun moveTo (Lnet/mamoe/mirai/utils/RemoteFile;)Z
 	public abstract fun moveTo (Lnet/mamoe/mirai/utils/RemoteFile;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun renameTo (Ljava/lang/String;)Z
